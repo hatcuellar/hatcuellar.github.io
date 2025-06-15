@@ -2,23 +2,204 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Roberto – Welcome</title>
+  <title>AI Voice & Chatbot Automation Agency | Roberto</title>
+  <meta name="description" content="We design, build and deploy AI voice assistants and chatbots that delight users and automate support—24/7, in any language.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI Voice & Chatbot Automation Agency">
+  <meta property="og:description" content="Conversational AI that sounds human, scales instantly and boosts your bottom line.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://<YOUR-DOMAIN>/">
+  <meta property="og:image" content="https://<YOUR-DOMAIN>/og-image.png">
+
   <style>
+    /* ─── Color system ───────────────────────────────────────────────────── */
     :root {
       --indigo: #185ABC;
       --teal:   #00897B;
+      --navy:   #202124;
+      --bg-light: #fafafa;
+      --bg-dark:  #0f172a;
+      --radius: 12px;
     }
-    body {font-family: system-ui, sans-serif; margin: 2rem; line-height:1.6;}
-    h1   {color: var(--indigo);}
-    a    {color: var(--teal); text-decoration: none;}
-    a:hover {text-decoration: underline;}
+
+    /* ─── Basic resets ──────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--navy);
+      background: var(--bg-light);
+      scroll-behavior: smooth;
+    }
+    h1, h2, h3 { line-height: 1.3; margin: 0 0 0.5em; }
+    a { color: var(--teal); text-decoration: none; }
+    a:hover, a:focus { text-decoration: underline; }
+
+    /* ─── Layout helpers ────────────────────────────────────────────────── */
+    .container { width: min(1200px, 90%); margin-inline: auto; }
+    .btn {
+      display: inline-block; padding: 0.75rem 1.5rem; font-weight: 600;
+      background: var(--indigo); color: #fff; border-radius: var(--radius);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgb(0 0 0 / .15); }
+
+    /* ─── Header & Nav ──────────────────────────────────────────────────── */
+    header {
+      background: #fff; position: sticky; top: 0; z-index: 999;
+      box-shadow: 0 2px 4px rgb(0 0 0 / .05);
+    }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+    .logo { font-size: 1.2rem; font-weight: 700; color: var(--indigo); }
+    .nav-links { display: flex; gap: 1rem; }
+    .nav-links a { font-weight: 500; }
+    @media (max-width: 640px) { .nav-links { display: none; } }
+
+    /* ─── Hero ─────────────────────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, var(--indigo) 0%, var(--teal) 100%);
+      color: #fff; text-align: center; padding: 6rem 1rem 5rem;
+      position: relative; overflow: hidden;
+    }
+    .hero h1 { font-size: clamp(2.2rem, 5vw + 1rem, 3.5rem); margin-bottom: 0.5rem; }
+    .hero p { font-size: 1.125rem; margin-bottom: 2rem; max-width: 38rem; margin-inline: auto; }
+    /* mascot placeholder */
+    .hero img.mascot {
+      width: 180px; position: absolute; bottom: -20px; right: -20px;
+      filter: drop-shadow(0 4px 8px rgb(0 0 0 / .25));
+    }
+
+    /* ─── Sections ─────────────────────────────────────────────────────── */
+    section { padding: 4rem 0; }
+    .features { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .card {
+      background: #fff; border-radius: var(--radius); padding: 2rem 1.5rem;
+      box-shadow: 0 4px 8px rgb(0 0 0 / .06); transition: transform .2s, box-shadow .2s;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 10px 18px rgb(0 0 0 / .12); }
+    .card h3 { margin-top: 0.5rem; color: var(--indigo); }
+
+    /* dark split background for process */
+    .process { background: var(--bg-dark); color: #e2e8f0; }
+    .step { display: flex; gap: 1rem; align-items: flex-start; }
+    .step-number {
+      flex-shrink: 0; font-size: 1.25rem; font-weight: 700;
+      width: 42px; height: 42px; border-radius: 50%;
+      background: var(--teal); color: #fff; display: grid; place-content: center;
+    }
+
+    /* ─── CTA banner ───────────────────────────────────────────────────── */
+    .cta {
+      text-align: center; background: var(--indigo); color: #fff;
+      padding: 3rem 1rem; border-radius: var(--radius); margin-top: 3rem;
+    }
+
+    /* ─── Footer ───────────────────────────────────────────────────────── */
+    footer { text-align: center; padding: 2rem 0 4rem; font-size: 0.875rem; color: #475569; }
   </style>
 </head>
+
 <body>
-  <h1>Hello, world! 👋</h1>
-  <p>I’m <strong>Roberto</strong>, a data &amp; ML engineer. This is my tiny corner of the web.</p>
-  <p>Find me on <a href="https://linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">LinkedIn</a>.</p>
-  <p><em>P.S. Neuron Smiley mascot coming soon…</em></p>
+  <!-- ╭──────────────── Header ────────────────╮ -->
+  <header>
+    <div class="container">
+      <nav>
+        <span class="logo">Neuron Smiley AI Agency</span>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ╭──────────────── Hero ───────────────────╮ -->
+  <section class="hero">
+    <h1>AI Voice & Chatbot Automation</h1>
+    <p>We build conversational AI that answers instantly, sounds human and scales with your business—so you never miss a customer.</p>
+    <a class="btn" href="https://linkedin.com/in/YOUR-LINKEDIN-HANDLE" target="_blank" rel="noopener">Connect on LinkedIn</a>
+
+    <!-- Mascot (replace src with your own SVG/PNG) -->
+    <img class="mascot" src="neuron-smiley.svg" alt="Neuron Smiley mascot">
+  </section>
+
+  <!-- ╭──────────────── Services ───────────────╮ -->
+  <section id="services">
+    <div class="container">
+      <h2>What We Deliver</h2>
+      <p>Rapid prototypes, enterprise-grade deployments and everything in between.</p>
+
+      <div class="features">
+        <div class="card">
+          <h3>Voice Assistants</h3>
+          <p>Natural-sounding phone bots that book, upsell and support—24 / 7.</p>
+        </div>
+        <div class="card">
+          <h3>Multilingual Chatbots</h3>
+          <p>Chatbots that converse in 100+ languages out of the box and understand context.</p>
+        </div>
+        <div class="card">
+          <h3>Custom RAG & LLM Apps</h3>
+          <p>Retrieve-augmented generation, domain-tuned models and compliant hosting.</p>
+        </div>
+        <div class="card">
+          <h3>Integration & Analytics</h3>
+          <p>Plug straight into CRM, ticketing and BI tools to surface actionable insights.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╭──────────────── Process ────────────────╮ -->
+  <section id="process" class="process">
+    <div class="container">
+      <h2 style="color:#fff;">Our 3-Step Process</h2>
+      <p>Ship value fast, iterate even faster.</p>
+
+      <div class="step" style="margin-bottom:1.5rem;">
+        <span class="step-number">1</span>
+        <div>
+          <h3>Discovery Sprint</h3>
+          <p>We run a concise workshop to map user journeys, data sources and KPIs. Outcome: a project canvas and fixed quote.</p>
+        </div>
+      </div>
+
+      <div class="step" style="margin-bottom:1.5rem;">
+        <span class="step-number">2</span>
+        <div>
+          <h3>MVP in 14 Days</h3>
+          <p>We build a deployable chatbot/voice agent, integrated with your test stack. Weekly demos keep you in the loop.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="step-number">3</span>
+        <div>
+          <h3>Scale & Optimize</h3>
+          <p>A/B test prompts, tune LLMs, add channels (WhatsApp, IVR, web) and surface analytics dashboards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╭──────────────── CTA ────────────────────╮ -->
+  <section id="contact">
+    <div class="container">
+      <div class="cta">
+        <h2>Ready to automate customer conversations?</h2>
+        <p>Let’s talk about your use-case and hit the ground running.</p>
+        <a class="btn" href="https://linkedin.com/in/YOUR-LINKEDIN-HANDLE" target="_blank" rel="noopener">Message Roberto on LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╭──────────────── Footer ─────────────────╮ -->
+  <footer>
+    <p>&copy; 2025 Roberto &nbsp;|&nbsp; All rights reserved.</p>
+  </footer>
 </body>
 </html>
