@@ -8,13 +8,13 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="AI Voice & Chatbot Automation Agency">
-  <meta property="og:description" content="Conversational AI that sounds human, scales instantly and boosts your bottom line.">
+  <meta property="og:description" content="Conversational AI that feels human, scales instantly and boosts your bottom line.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://robertodatasmith.github.io/">
   <meta property="og:image" content="https://robertodatasmith.github.io/og-image.png">
 
   <style>
-    /* ─── Color system ─────────────────────────────── */
+    /* ─── Color system ───────────────────────────────── */
     :root{
       --indigo:#185ABC;
       --teal:#00897B;
@@ -23,7 +23,7 @@
       --bg-dark:#0f172a;
       --radius:12px;
     }
-    /* ─── Reset / basics ───────────────────────────── */
+    /* ─── Reset / basics ─────────────────────────────── */
     *,*::before,*::after{box-sizing:border-box;}
     body{
       margin:0;
@@ -37,7 +37,7 @@
     a{color:var(--teal);text-decoration:none;}
     a:hover,a:focus{text-decoration:underline;}
 
-    /* ─── Layout helpers ──────────────────────────── */
+    /* ─── Layout helpers ─────────────────────────────── */
     .container{width:min(1200px,90%);margin-inline:auto;}
     .btn{
       display:inline-block;padding:0.75rem 1.5rem;font-weight:600;
@@ -46,7 +46,7 @@
     }
     .btn:hover{transform:translateY(-2px);box-shadow:0 6px 12px rgb(0 0 0 /.15);}
 
-    /* ─── Header / nav ────────────────────────────── */
+    /* ─── Header / nav ──────────────────────────────── */
     header{
       background:#fff;position:sticky;top:0;z-index:999;
       box-shadow:0 2px 4px rgb(0 0 0 /.05);
@@ -57,7 +57,7 @@
     .nav-links a{font-weight:500;}
     @media(max-width:640px){.nav-links{display:none;}}
 
-    /* ─── Hero ────────────────────────────────────── */
+    /* ─── Hero ──────────────────────────────────────── */
     .hero{
       background:linear-gradient(135deg,var(--indigo) 0%,var(--teal) 100%);
       color:#fff;text-align:center;padding:6rem 1rem 5rem;position:relative;overflow:hidden;
@@ -69,7 +69,7 @@
       filter:drop-shadow(0 4px 8px rgb(0 0 0 /.25));
     }
 
-    /* ─── Sections ───────────────────────────────── */
+    /* ─── Sections ─────────────────────────────────── */
     section{padding:4rem 0;}
     .features{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
     .card{
@@ -87,15 +87,14 @@
       background:var(--teal);color:#fff;display:grid;place-content:center;
     }
 
-    /* Pricing */
+    /* Pricing / tiers */
     .pricing-grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
     .package{
       background:#fff;border:2px solid var(--indigo);border-radius:var(--radius);
       padding:2rem 1.5rem;text-align:center;
     }
     .package h3{margin-bottom:0.25rem;color:var(--indigo);}
-    .price{font-size:1.75rem;font-weight:700;margin-bottom:0.5rem;}
-    .package ul{list-style:none;padding:0;margin:1rem 0 0;}
+    .package ul{list-style:none;padding:0;margin:1rem 0 0;text-align:left;}
     .package li{margin-bottom:0.5rem;}
 
     /* CTA banner */
@@ -107,7 +106,7 @@
 </head>
 
 <body>
-  <!-- ╭──────────────── Header ───────────────╮ -->
+  <!-- ╭──────────────── Header ─────────────────────────╮ -->
   <header>
     <div class="container">
       <nav>
@@ -115,14 +114,14 @@
         <div class="nav-links">
           <a href="#services">Services</a>
           <a href="#process">Process</a>
-          <a href="#pricing">Pricing</a>
+          <a href="#tiers">Tiers</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <!-- ╭──────────────── Hero ──────────────────╮ -->
+  <!-- ╭──────────────── Hero ───────────────────────────╮ -->
   <section class="hero">
     <h1>AI Voice & Chatbot Automation for Hotels & Tourism</h1>
     <p>We craft conversational AI that feels human, boosts direct bookings and slashes front-desk workload—24 / 7, in any language.</p>
@@ -132,7 +131,7 @@
     <img class="mascot" src="neuron-smiley.svg" alt="Neuron Smiley mascot">
   </section>
 
-  <!-- ╭──────────────── Services ──────────────╮ -->
+  <!-- ╭──────────────── Services ───────────────────────╮ -->
   <section id="services">
     <div class="container">
       <h2>What We Deliver</h2>
@@ -159,7 +158,7 @@
     </div>
   </section>
 
-  <!-- ╭──────────────── Process ───────────────╮ -->
+  <!-- ╭──────────────── Process ────────────────────────╮ -->
   <section id="process" class="process">
     <div class="container">
       <h2 style="color:#fff;">Our 3-Step Process</h2>
@@ -169,7 +168,7 @@
         <span class="step-number">1</span>
         <div>
           <h3>Discovery Sprint</h3>
-          <p>Map guest journeys, data sources and KPIs in a concise workshop. Outcome: a clear canvas and fixed quote.</p>
+          <p>Map guest journeys, data sources and KPIs in a concise workshop. Outcome: a clear canvas and scoped proposal.</p>
         </div>
       </div>
 
@@ -191,73 +190,69 @@
     </div>
   </section>
 
-  <!-- ╭──────────────── Pricing ───────────────╮ -->
-  <section id="pricing">
+  <!-- ╭──────────────── Capability Tiers ───────────────╮ -->
+  <section id="tiers">
     <div class="container">
-      <h2>Pricing for Hotels & Tourism</h2>
-      <p>Each proposal is tailored, but here’s how we think about cost and what typical packages look like.</p>
+      <h2>Engagement Tiers</h2>
+      <p>Every project is scoped individually, but these tiers illustrate typical depth of integration and deliverables.</p>
 
-      <h3>Key Factors That Shape Your Quote</h3>
-      <ul>
-        <li><strong>Scope & Complexity </strong>—number of intents, languages and channels.</li>
-        <li><strong>System Integrations </strong>—PMS, CRM, booking engines, payment, IoT.</li>
-        <li><strong>AI Depth </strong>—rule-based FAQ up to generative LLM with custom training.</li>
-        <li><strong>Compliance </strong>—GDPR, PCI and guest-data safeguards.</li>
-        <li><strong>Ongoing Care </strong>—training, analytics and seasonal content updates.</li>
-      </ul>
-
-      <h3 style="margin-top:2rem;">Sample Packages</h3>
       <div class="pricing-grid">
+        <!-- Starter -->
         <div class="package">
           <h3>Starter</h3>
-          <p class="price">€5 000 setup<br>€500/mo</p>
           <ul>
-            <li>Pre-built FAQ bot</li>
-            <li>1 language, 2 channels</li>
-            <li>Basic booking link</li>
-            <li>Email support</li>
+            <li>Pre-configured FAQ or concierge chatbot</li>
+            <li>Single language, web chat & Facebook Messenger</li>
+            <li>Simple booking link or hand-off to your engine</li>
+            <li>Template-based brand styling</li>
+            <li>Email support & basic usage analytics</li>
           </ul>
         </div>
+
+        <!-- Professional -->
         <div class="package">
           <h3>Professional</h3>
-          <p class="price">€15 000 one-time</p>
           <ul>
-            <li>Custom NLP & 2 languages</li>
-            <li>PMS + CRM integration</li>
-            <li>Analytics dashboard</li>
-            <li>3 months post-launch tuning</li>
+            <li>Custom NLP with two languages & tone matching</li>
+            <li>Integration to PMS, CRM and loyalty database</li>
+            <li>Omnichannel deployment (web, WhatsApp, in-app)</li>
+            <li>Real-time dashboard & KPI reporting</li>
+            <li>3-month optimisation and content tuning period</li>
           </ul>
         </div>
+
+        <!-- Enterprise -->
         <div class="package">
           <h3>Enterprise</h3>
-          <p class="price">from €50 000</p>
           <ul>
-            <li>Multi-property AI concierge</li>
-            <li>Voice + chat + WhatsApp</li>
-            <li>Custom LLM training</li>
-            <li>Dedicated success squad</li>
+            <li>Multi-property AI concierge—chat & voice</li>
+            <li>Generative LLM with custom domain training</li>
+            <li>Full security review, GDPR & PCI compliance</li>
+            <li>Dedicated success squad & 24/7 SLA</li>
+            <li>Road-map for continual model improvement</li>
           </ul>
         </div>
       </div>
 
-      <p style="margin-top:1.5rem;font-size:0.9rem;">Prices are illustrative to help budgeting; final quotes depend on your exact requirements.</p>
+      <p style="margin-top:1.5rem;font-size:0.9rem;">Investment levels are determined after our discovery sprint to match your specific scope, timeline and ROI targets.</p>
     </div>
   </section>
 
-  <!-- ╭──────────────── CTA ───────────────────╮ -->
+  <!-- ╭──────────────── CTA ────────────────────────────╮ -->
   <section id="contact">
     <div class="container">
       <div class="cta">
         <h2>Ready to automate guest conversations?</h2>
-        <p>Let’s explore your use-case and timeline.</p>
+        <p>Let’s explore your use-case and craft a tailored proposal.</p>
         <a class="btn" href="https://www.linkedin.com/in/robertochattam/" target="_blank" rel="noopener">Message Roberto on LinkedIn</a>
       </div>
     </div>
   </section>
 
-  <!-- ╭──────────────── Footer ────────────────╮ -->
+  <!-- ╭──────────────── Footer ─────────────────────────╮ -->
   <footer>
-    <p>&copy; 2025 Roberto | All rights reserved.</p>
+    <p>&copy; 2025 Roberto &nbsp;|&nbsp; All rights reserved.</p>
   </footer>
 </body>
 </html>
+
